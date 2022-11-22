@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hovenier opties </title>
+</head>
+<body>
+    <style>
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .options {
+            margin-left: 1rem;
+        }
+        .text-area {
+            margin-left: 1rem;
+        }
+        textarea {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(red, white);
+            opacity: 40%;
+            color: black;
+            margin-top: 5rem;
+            align-content: center;
+            border:6px outset #000000;
+            resize: none;
+        }
+    </style>
+    
+    <h2> Eerste opties voor hovenier </h2>
+    <form method="post">
+        <div>
+            <input type="checkbox" name="optie1false" value="1"> Optie 1 <br>
+        </div>
+        <div class="options">
+            <select name="optie1" id="optie1">
+                <option value="bomen_struiken_planten"> Bomen of struiken planten </option>
+                <option value="Tuinaanleg"> Tuinaanleg </option>
+                <option value="Tuinontwerp"> Tuinontwerp </option>
+                <option value="Tuinonderhoud"> Tuinonderhoud </option>
+                <option value="Gras, struiken en heggen snoeien of verwijderen"> Gras, struiken en heggen snoeien of verwijderen </option>
+                <option value="Gras leggen of zaaien"> Gras leggen of zaaien </option>
+                <option value="Tuin of buitenverlichting installeren"> Tuin of buitenverlichting installeren </option>
+                <option value="Vijver aanleggen"> Vijver aanleggen </option>
+                <option value="Tuin irrigatie"> Tuin irrigatie </option>
+            </select>
+        </div>
+    </form>
+
+    <div class="text-area">
+        <textarea>
+            
+        </textarea>
+        </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
