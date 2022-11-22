@@ -10,34 +10,34 @@
   <body style="background-color: rgb(88, 237, 112);">
     <div name="MainDiv" class="flex flex-col justify-evenly grid content-evenly">
 
-      <div class="flex justify-around">
+      <div class="flex justify-around mt-8">
         <img src="../icon/Logo.svg">
       </div>
 
-      <div name="ButtonHolder" class="grid grid-cols-2 gap-20 content-around">
-          <button name="ButtonOne" class="bg-black ">
-            <img src="../icon/HammerButton.svg">
+      <div name="ButtonHolder" class="grid grid-cols-2 gap-10 content-between ml-6 mt-8">
+          <button name="ButtonOne" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/HammerButton.svg" class="w-14 h-14">
           </button>
 
-          <div name="ButtonTwo" class="bg-black">
-            <img src="../icon/PainterButton.svg">
-          </div>
+          <button name="ButtonTwo" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/PainterButton.svg" class="w-14 h-14">
+          </button>
 
-          <div name="ButtonThree" class="bg-black">
-            <img src="../icon/StekkerButton.svg">
-          </div>
+          <button name="ButtonThree" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/StekkerButton.svg" class="w-14 h-14">
+          </button>
 
-          <div name="ButtonFour" class="bg-black">
-            <img src="../icon/KraanButton.svg">
-          </div>
+          <button name="ButtonFour" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/KraanButton.svg" class="w-14 h-14">
+          </button>
 
-          <div name="ButtonFive" class="bg-black">
-            <img src="../icon/LockButton.svg">
-          </div>
+          <button name="ButtonFive" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/LockButton.svg" class="w-14 h-14">
+          </button>
 
-          <div name="ButtonSix" class="bg-black">
-            <img src="../icon/ComputerButton.svg">
-        </div>
+          <button name="ButtonSix" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/ComputerButton.svg" class="w-14 h-14">
+        </button>
       </div>
     </div>
     <footer class="bg-black h-20 flex  justify-evenly items-center absolute bottom-0 w-full rounded-t-2xl">
@@ -47,3 +47,11 @@
     </footer>
   </body>
 </html>
+
+<style>
+  .shadow {
+      -webkit-box-shadow: 10px 10px 0px 3px rgba(7,7,7,0.5);
+      -moz-box-shadow: 10px 10px 0px 3px rgba(7,7,7,0.5);
+      box-shadow: 10px 10px 0px 3px rgba(7,7,7,0.5);
+  }
+</style>
