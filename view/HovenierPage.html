@@ -33,7 +33,14 @@
         .text-areaDiv {
             margin-left: 1rem;
         }
-        .text-area2Div {
+        .text-areaDiv2 {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .text-areaDiv3 {
             margin-left: 1rem;
             margin-top: 1rem;
             display: flex;
@@ -45,6 +52,11 @@
         }
         .textarea2 {
             margin-top: 0;
+        }
+        .textarea3 {
+            margin-top: 0;
+            font-weight: 600;
+
         }
         textarea {
             width: 200px;
@@ -66,7 +78,7 @@
             border-radius: 1rem;
         }
     </style>
-    
+<!--     
     <h2> Opties kunnen aanklikken als relevant (voor hovenier) </h2>
     <form method="post">
         <div>
@@ -93,15 +105,22 @@
         </textarea>
         </div>
 
-        <div class="text-area2Div">
+        <div class="text-areaDiv2">
             <textarea class="textarea2" rows="4" cols="20">tell us extra information from most important (red) to least important (white)</textarea>
             <div class="importanceMeter">
             </div>
         </div>
 
+    <div class="text-areaDiv3">
+        <textarea class="textarea3">
+            
+        </textarea>
+    </div>
+
+
         <style>
 
-        </style>
+        </style> -->
 
     <div class="flex justify-center flex-col mt-40 pt-10 pb-10">
         <div class="flex justify-center">
@@ -109,8 +128,8 @@
         </div>
         <div class="flex justify-center">
             <form>
-                <div id="choices" class="flex p-1 justify-center flex-wrap">
-                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Bomen of struiken planten" value="Bomen of struiken planten">
+                <div id="choices" class="flex p-1 justify-center flex-col-reverse flex-wrap">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuin irrigatie" value="Tuin irrigatie">
                     <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinaanleg" value="Tuinaanleg"> 
                     <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinontwerp" value="Tuinontwerp"> 
                     <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinonderhoud" value="Tuinonderhoud"> 
@@ -118,7 +137,7 @@
                     <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Gras leggen of zaaien" value="Gras leggen of zaaien">
                     <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuin of buitenverlichting installeren" value="Tuin of buitenverlichting installeren">
                     <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Vijver aanleggen" value="Vijver aanleggen">
-                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuin irrigatie" value="Tuin irrigatie">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Bomen of struiken planten" value="Bomen of struiken planten">
                 </div>
             </form>
         </div>
