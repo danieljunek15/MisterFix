@@ -17,19 +17,40 @@
         .options {
             margin-left: 1rem;
         }
-        .text-area {
+        .text-areaDiv {
             margin-left: 1rem;
+        }
+        .text-area2Div {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .textarea1 {
+            background-image: linear-gradient(red, white);
+        }
+        .textarea2 {
+            margin-top: 0;
         }
         textarea {
             width: 200px;
             height: 200px;
-            background-image: linear-gradient(red, white);
+            background-color: white;
             opacity: 40%;
             color: black;
             margin-top: 5rem;
             align-content: center;
             border:6px outset #000000;
             resize: none;
+        }
+
+        .importanceMeter {
+            margin-left: 1rem;
+            padding: 0.5rem;
+            background-image: linear-gradient(red, yellow, white);
+            height: 200px;
+            border-radius: 1rem;
         }
     </style>
     
@@ -53,10 +74,16 @@
         </div>
     </form>
 
-    <div class="text-area">
-        <textarea>
+    <div class="text-areaDiv">
+        <textarea class="textarea1">
             
         </textarea>
+        </div>
+
+        <div class="text-area2Div">
+            <textarea class="textarea2" rows="4" cols="20">tell us extra information from most important (red) to least important (white)</textarea>
+            <div class="importanceMeter">
+            </div>
         </div>
 
     <script src="index.js"></script>
