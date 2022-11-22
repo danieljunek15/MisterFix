@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Hovenier opties </title>
+            
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    
 </head>
 <body>
     <style>
@@ -14,8 +17,18 @@
             align-items: flex-start;
             justify-content: flex-start;
         }
-        .options {
+
+        .options1 {
             margin-left: 1rem;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            margin-left: 1rem;
+        }
+        .options > * {
+            margin-bottom: 1rem;
         }
         .text-areaDiv {
             margin-left: 1rem;
@@ -54,12 +67,12 @@
         }
     </style>
     
-    <h2> Eerste opties voor hovenier </h2>
+    <h2> Opties kunnen aanklikken als relevant (voor hovenier) </h2>
     <form method="post">
         <div>
             <input type="checkbox" name="optie1false" value="1"> Optie 1 <br>
         </div>
-        <div class="options">
+        <div class="options1">
             <select name="optie1" id="optie1">
                 <option value="bomen_struiken_planten"> Bomen of struiken planten </option>
                 <option value="Tuinaanleg"> Tuinaanleg </option>
@@ -85,6 +98,31 @@
             <div class="importanceMeter">
             </div>
         </div>
+
+        <style>
+
+        </style>
+
+    <div class="flex justify-center flex-col mt-40 pt-10 pb-10">
+        <div class="flex justify-center">
+            <h2 class="font-bold text-2xl"> Opties voor een hovenierklus<h2>
+        </div>
+        <div class="flex justify-center">
+            <form>
+                <div id="choices" class="flex p-1 justify-center flex-wrap">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Bomen of struiken planten" value="Bomen of struiken planten">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinaanleg" value="Tuinaanleg"> 
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinontwerp" value="Tuinontwerp"> 
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinonderhoud" value="Tuinonderhoud"> 
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer w-/12" name="Gras, struiken en heggen snoeien of verwijderen" value="Gras, struiken en heggen snoeien of verwijderen">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Gras leggen of zaaien" value="Gras leggen of zaaien">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuin of buitenverlichting installeren" value="Tuin of buitenverlichting installeren">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Vijver aanleggen" value="Vijver aanleggen">
+                    <input type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuin irrigatie" value="Tuin irrigatie">
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="/scripts/script_hovenier_concepten.js"></script>
 </body>
