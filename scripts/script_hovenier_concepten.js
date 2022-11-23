@@ -65,6 +65,8 @@ const subCats = [
     },
 ];
 
+console.log("hoi");
+
 choiceButtons.forEach(element => {
     element.addEventListener('click', function() {
         const back = document.createElement('button');
@@ -94,8 +96,12 @@ choiceButtons.forEach(element => {
     }, {once : true});
 });
 
+<<<<<<< Updated upstream
 function displaySubCategories(option1) {
     choiceDiv.classList.add('flex', 'flex-col-reverse', 'justify-center', 'items-center');
+=======
+function displaySubCategories(sub) {
+>>>>>>> Stashed changes
     const subCatDiv = document.getElementById('subcategories');
     subCatDiv.innerHTML = '';
     const subCatTitle = document.createElement('h1');
@@ -103,7 +109,11 @@ function displaySubCategories(option1) {
     subCatTitle.innerHTML = 'Kies een subcategorie';
     subCatDiv.appendChild(subCatTitle);
     subCats.forEach(element => {
+<<<<<<< Updated upstream
         if (element.name === option1) {
+=======
+        if (element.name === sub) {
+>>>>>>> Stashed changes
             element.subcategories.forEach(subCat => {
                 const subCatButton = document.createElement('button');
                 subCatButton.classList.add('bg-blue-500', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer');
