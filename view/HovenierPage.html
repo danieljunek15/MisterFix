@@ -9,28 +9,44 @@
     
 </head>
 <body class="bg-[#58ED70]">
-
-    <div class="flex justify-center flex-col p-10">
-        <div class="flex justify-center">
-            <h2 class="font-bold text-2xl"> Opties voor een hovenierklus<h2>
-        </div>
-        <div class="flex justify-center">
-            <form>
-                <div id="choices" class="flex p-1 justify-center flex-row-reverse flex-wrap">
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuin irrigatie" value="Tuin irrigatie">
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinontwerp" value="Tuinontwerp"> 
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinonderhoud" value="Tuinonderhoud"> 
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Gras leggen of zaaien" value="Gras leggen of zaaien">
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Vijver aanleggen" value="Vijver aanleggen">
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuinaanleg" value="Tuinaanleg"> 
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Bomen of struiken planten" value="Bomen of struiken planten">
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer " name="Tuin of buitenverlichting installeren" value="Tuin of buitenverlichting installeren">
-                    <input type="button" class="flex text-sm bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded m-1 cursor-pointer" name="Gras, struiken en heggen snoeien of verwijderen" value="Gras, struiken en heggen snoeien of verwijderen">
-                </div>
-            </form>
+    <div class="flex justify-center mt-8">
+        <img src="../icon/Logo.svg">
+    </div>
+    <div class="flex justify-center">
+        <div class="flex justify-center flex-col pt-10 pb-10">
+            <div class="flex flex-col items-center">
+                <h2 class="font-bold text-2xl text-center">Wat moet de hovenier doen?<h2>
+                    <p class="text-lg">Maak een keuze</p>
+            </div>
+            <div class="flex justify-center">
+                <form>
+                    <div id="choices" class="shadow flex justify-center flex-col-reverse flex-wrap text-sm bg-[#1C1D23] p-4 mt-8">
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Tuin irrigatie" value="Tuin irrigatie">
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Tuinaanleg" value="Tuinaanleg"> 
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Tuinontwerp" value="Tuinontwerp"> 
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Tuinonderhoud" value="Tuinonderhoud"> 
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer w-/12 py-4 px-2" name="Gras, struiken en heggen snoeien of verwijderen" value="Gras, struiken en heggen snoeien of verwijderen">
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Gras leggen of zaaien" value="Gras leggen of zaaien">
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Tuin of buitenverlichting installeren" value="Tuin of buitenverlichting installeren">
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Vijver aanleggen" value="Vijver aanleggen">
+                        <input type="button" class="bg-black hover:bg-blue-700 text-white font-bold rounded m-1 cursor-pointer py-4 px-2" name="Bomen of struiken planten" value="Bomen of struiken planten">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+    <footer class="bg-black py-2 flex justify-center items-center mb-0">
+        <img src="../icon/SupportButton.svg">
+    </footer>
 
     <script type="application/javascript" src="../scripts/script_hovenier_concepten.js"></script>
 </body>
 </html>
+
+<style>
+    .shadow {
+        -webkit-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+        -moz-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+        box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+    }
+</style>
