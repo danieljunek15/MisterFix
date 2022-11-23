@@ -65,26 +65,27 @@ const subCats = [
     },
 ];
 
-console.log("hoi");
-
 choiceButtons.forEach(element => {
     element.addEventListener('click', function() {
+        document.querySelector('footer').classList.add('absolute', 'bottom-0', 'w-full');
         const back = document.createElement('button');
         back.innerHTML = 'Terug naar optie 1';
         back.classList.add('bg-black', 'hover:bg-gray-700', 'text-white', 'font-bold', 'py-2', 'rounded', 'ml-10', 'mr-10','cursor-pointer');
         back.addEventListener('click', function() {
             choiceButtons.forEach(element => {
-                element.style.visibility = 'visible';
+                setInterval(() => {
+                    element.style.visibility = 'visible';
+                }, 3000);
             });
         });
         choiceDiv.appendChild(back);
         choiceButtons.forEach(element => {
-            element.style.visibility = 'hidden';
-            element.classList.remove('bg-blue-500', 'py-2', 'px-4', 'hover:bg-blue-700');
-            element.classList.add('bg-blue-700', 'hover:bg-blue-900');
+            element.style.display = 'none';
+            element.classList.remove('bg-black', 'py-2', 'px-4',);
+            element.classList.add('bg-black');
             if (element === this) {
                 const choice1 = document.createElement('h1');
-                choice1.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-green-700');
+                choice1.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
                 choice1.innerHTML = 'U heeft gekozen voor ' + element.value;
                 choiceDiv.appendChild(choice1);
                 const subcategories = document.createElement('div');
@@ -100,14 +101,14 @@ function displaySubCategories(sub) {
     const subCatDiv = document.getElementById('subcategories');
     subCatDiv.innerHTML = '';
     const subCatTitle = document.createElement('h1');
-    subCatTitle.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-green-700');
+    subCatTitle.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
     subCatTitle.innerHTML = 'Kies een subcategorie';
     subCatDiv.appendChild(subCatTitle);
     subCats.forEach(element => {
         if (element.name === sub) {
             element.subcategories.forEach(subCat => {
                 const subCatButton = document.createElement('button');
-                subCatButton.classList.add('bg-blue-500', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer');
+                subCatButton.classList.add('bg-black', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
                 subCatButton.innerHTML = subCat;
                 subCatButton.addEventListener('click', function() {
                     displayQuestions(subCat);
