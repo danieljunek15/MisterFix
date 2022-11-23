@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="background-color: rgb(88, 237, 112);">
+    <div name="MainDiv" class="flex flex-col justify-evenly grid content-evenly">
+
+      <div class="flex justify-around mt-8">
+        <img src="../icon/Logo.svg">
+      </div>
+
+      <div name="ButtonHolder" class="grid grid-cols-2 gridGap gap-x-32 gap-y-20 content-between mt-14">
+          <button name="ButtonOne" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/HammerButton.svg" class="w-14 h-14">
+          </button>
+
+          <button name="ButtonTwo" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/PainterButton.svg" class="w-14 h-14">
+          </button>
+        <a href="elektricienPage.html">
+          <button name="ButtonThree" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/StekkerButton.svg" class="w-14 h-14">
+          </button>
+        </a>
+          <button name="ButtonFour" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/KraanButton.svg" class="w-14 h-14">
+          </button>
+        <a href="hovenierPage.html">
+          <button name="ButtonFive" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/GardenerButton.svg" class="w-14 h-14">
+          </button>
+        </a>
+          <button name="ButtonSix" class="bg-black flex justify-center h-20 w-20 grid items-center shadow rounded-xl focus:outline-none focus:ring focus:ring-grey-300 focus:mt-1.5 focus:ml-1.5">
+            <img src="../icon/LockButton.svg" class="w-14 h-14">
+        </button>
+      </div>
+    </div>
+    <footer class="bg-black h-20 flex  justify-evenly items-center absolute bottom-0 w-full rounded-t-2xl">
+      <a href="ContactPage.html">
+        <img src="../icon/SupportButton.svg">
+      </a>
+      <div class="h-16 w-2 bg-white rounded-full"></div>
+      <a href="LoginPage.html">
+        <button class="bg-white text-black px-4 py-2 rounded-full font-bold uppercase">Login</button>
+      </a>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .shadow {
+      -webkit-box-shadow: 7px 5px 0px 1px rgba(7,7,7,0.5);
+      -moz-box-shadow: 7px 5px 0px 1px rgba(7,7,7,0.5);
+      box-shadow: 7px 5px 0px 1px rgba(7,7,7,0.5); 
+  }
+  @media only screen and (max-width: 380px) {
+    .gridGap {
+      row-gap: 2rem;
+    }
+  }
+</style>
