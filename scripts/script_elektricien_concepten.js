@@ -7,7 +7,7 @@ const subCats = [
         name: "Zonnepaneel systeem installeren of onderhouden",
         subcategories: ["Aanschaf van de zonnepanelen", "Installeren", "Vervangen", "Onderhoud", "Repareren", "Anders"],
         information: {
-            typeOfPlants: ["Schuin dak", "Plat dak", "Grond", "In overleg"],
+            typeOfRoof: ["Schuin dak", "Plat dak", "Grond", "In overleg"],
             questions: ["Hoeveel zonnepanelen moeten er geplaatst worden?"],
             options: ["int", "0-2, 2-4, 4-6, meer dan 6, dat weet ik niet"],
             location: ["voortuin", "achtertuin", "zijtuin", "balkon", "dakterras", "in overleg", "anders"],
