@@ -10,27 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background: #58ED70">
+<body style="background: #58ED70" class="overflow-hidden">
     <div class="flex justify-center">
-        <img src="../icon/Logo.svg" class="mt-8">
+        <a href="HomePage.html"><img src="../icon/Logo.svg" class="mt-8"></a>
     </div>
     <div class="px-12">
-        <div style="font-family: 'Inria Sans', sans-serif;">
-            <h3 class="text-white font-bold text-3xl mt-4">Get started</h3>
-            <p class="text-xl font-bold">To start, fill in your details</p>
-        </div>
-        <div style="background: #1C1D23" class="shadow rounded-xl text-white px-4 py-8 mt-12">
+        <div style="background: #1C1D23" class="shadow rounded-xl text-white px-4 pt-5 pb-2 mt-12">
             <label class="block text-xl mb-2 font-bold">E-mail address</label>
-            <input type="text" class="bg-black rounded-full h-10 w-full mb-4 px-4 outline-0">
+            <input type="text" class="bg-black rounded-full h-10 w-full mb-5 px-4 outline-0">
             <label class="block text-xl mb-2 font-bold">Password</label>
             <input type="text" class="bg-black rounded-full h-10 w-full px-4 outline-0">
+            <div class="flex justify-center mt-12 mb-12 relative z-1"><a href="HomePage.html"><button style="background: #58ED70" class="px-12 py-2 text-2xl rounded-xl text-center">Login</button></a></div>
         </div>
-        <div class="flex justify-center mt-12 mb-12"><a href="#"><button style="background: #1C1D23" class="px-24 pb-4 text-4xl rounded-full text-center">👉</button></a></div>
     </div>
-    <footer class="bg-black py-2 flex justify-around items-center rounded-t-2xl mb-0 absolute bottom-0 w-full">
+    <img src="../icon/CurveBackground.svg" class="w-full absolute bottom-0 background">
+    <footer class="bg-black py-2 flex justify-center items-center mb-0 absolute bottom-0 w-full">
         <img src="../icon/SupportButton.svg">
-        <div class="h-16 w-2 bg-white rounded-full"></div>
-        <button class="bg-white text-black px-4 py-2 rounded-full font-bold uppercase">Login</button>
     </footer>
 </body>
 </html>
@@ -40,5 +35,11 @@
         -webkit-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
         -moz-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
         box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+    }
+
+    @media screen and (max-width: 376px) {
+        .background {
+            display: none;
+        }
     }
 </style>
