@@ -74,7 +74,9 @@ choiceButtons.forEach(element => {
         back.classList.add('bg-black', 'hover:bg-gray-700', 'text-white', 'font-bold', 'py-2', 'rounded', 'ml-10', 'mr-10','cursor-pointer');
         back.addEventListener('click', function() {
             choiceButtons.forEach(element => {
-                element.style.display = 'block';
+                setInterval(() => {
+                    element.style.visibility = 'visible';
+                }, 3000);
             });
         });
         choiceDiv.appendChild(back);
