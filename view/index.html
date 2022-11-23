@@ -14,11 +14,16 @@
         <img src="../icon/Logo.svg">
       </div>
 
-      <div name="ButtonHolder" class="grid grid-cols-2 gap-10 content-between ml-6 mt-8">
-
+      <div name="ButtonHolder" class="flex flex-col absolute bottom-60 w-full z-10 grid content-end">
+        <div class="w-full flex justify-start">
+          <button class="bg-black text-white h-10 w-24 shadow ml-10 rounded-xl">test</button>
+        </div>
+        <div class="w-full flex justify-end grid content-end">
+          <button style="background-color: rgb(88, 237, 112);" class="text-white h-10 w-24 shadow mr-8 rounded-xl">test</button>
+        </div>
       </div>
     </div>
-    <img src="../icon/CurveBackground.svg" class="absolute bottom-16">
+    <img src="../icon/CurveBackground.svg" class="absolute bottom-16 z-0 w-full">
     <footer class="bg-black h-20 flex  justify-evenly items-center absolute bottom-0 w-full rounded-t-2xl">
       <img src="../icon/SupportButton.svg">
       <div class="h-16 w-2 bg-white rounded-full"></div>
@@ -26,3 +31,11 @@
     </footer>
   </body>
 </html>
+
+<style>
+    .shadow {
+      -webkit-box-shadow: 10px 10px 0px 1px rgba(7,7,7,0.5);
+      -moz-box-shadow: 10px 10px 0px 1px rgba(7,7,7,0.5);
+      box-shadow: 10px 10px 0px 1px rgba(7,7,7,0.5); 
+  }
+</style>
