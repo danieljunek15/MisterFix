@@ -88,13 +88,14 @@ choiceButtons.forEach(element => {
                 const subcategories = document.createElement('div');
                 subcategories.id = 'subcategories';
                 choiceDiv.appendChild(subcategories);
-                displaySubCategories();
+                displaySubCategories(element.value);
             }
         });
     }, {once : true});
 });
 
-function displaySubCategories() {
+function displaySubCategories(option1) {
+    choiceDiv.classList.add('flex', 'flex-col-reverse', 'justify-center', 'items-center');
     const subCatDiv = document.getElementById('subcategories');
     subCatDiv.innerHTML = '';
     const subCatTitle = document.createElement('h1');
@@ -102,9 +103,7 @@ function displaySubCategories() {
     subCatTitle.innerHTML = 'Kies een subcategorie';
     subCatDiv.appendChild(subCatTitle);
     subCats.forEach(element => {
-        console.log(element.name);
-        console.log(option1.value);
-        if (element.name === option1.value) {
+        if (element.name === option1) {
             element.subcategories.forEach(subCat => {
                 const subCatButton = document.createElement('button');
                 subCatButton.classList.add('bg-blue-500', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer');
