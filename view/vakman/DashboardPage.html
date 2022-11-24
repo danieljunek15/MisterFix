@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#46B4F2] min-h-full">
+    <div class="flex justify-center">
+        <a href="HomePage.html"><img class="relative mt-8" src="../../icon/logo.svg"></a>
+    </div>
+    <div class="bg-[#1C1D23] pb-8 font-bold mt-16 mx-12 rounded-xl shadow">
+        <div class="justify-center flex text-2xl p-4">
+            <h2 class="text-white">Open jobs</h2>
+        </div>
+        <div class="bg-black">
+            <div class="flex justify-between text-white font-bold px-4 py-2">
+                <p>40m² grasmat leggen</p>
+                <div class="flex">
+                    <img src="../../icon/CheckMark.svg">
+                    <img src="../../icon/Cross.svg">
+                </div>
+            </div>
+            <div class="flex justify-between text-white font-bold px-4 py-2">
+                <p>Tuin onderhouden</p>
+                <div class="flex">
+                    <img src="../../icon/CheckMark.svg">
+                    <img src="../../icon/Cross.svg">
+                </div>
+            </div>
+            <div class="flex justify-between text-white font-bold px-4 py-2">
+                <p>Nieuwe tuin aanleggen</p>
+                <div class="flex">
+                    <img src="../../icon/CheckMark.svg">
+                    <img src="../../icon/Cross.svg">
+                </div>
+            </div>
+            <div class="bg-[#1C1D23] justify-center flex text-2xl p-4">
+                <h2 class="text-white">Confirmed jobs</h2>
+            </div>
+            <div class="flex justify-between text-white font-bold px-4 py-2">
+                <p>Meterkast reparen</p>
+                <p class="font-thin">Today at 15:00</p>
+            </div>
+            <div class="flex justify-between text-white font-bold px-4 py-2">
+                <p>Grasmat eruithalen</p>
+                <p class="font-thin">Today at 18:00</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center my-12">
+        <button class="bg-black smallshadow text-white px-8 py-2 rounded-lg font-bold">Logout</button>
+    </div>
+    <footer class="bg-black py-2 flex justify-center items-center mb-0 mt-12">
+        <img src="../../icon/SupportButton.svg">
+    </footer>
+</body>
+</html>
+
+<style>
+    .shadow {
+        -webkit-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+        -moz-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+        box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+    }
+
+    .smallshadow {
+        -webkit-box-shadow: 10px 10px 3px 0px rgba(7,7,7,0.5);
+        -moz-box-shadow: 10px 10px 3px 0px rgba(7,7,7,0.5);
+        box-shadow: 10px 10px 3px 0px rgba(7,7,7,0.5);
+    }
+
+    @media screen and (min-width: 390px) {
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+</style>
