@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="background-color: rgb(88, 237, 112);">
+    <div name="MainDiv" class="flex flex-col justify-evenly grid content-evenly">
+
+      <div class="flex justify-around mt-8">
+        <img src="../icon/Logo.svg">
+      </div>
+      <p class="text-2xl text-center mt-10"><b>Welkom bij MrFix, maak een account aan om te beginnen.</b></p>
+      <div name="ButtonHolder" class="flex flex-col absolute bottom-60 w-full z-10 grid content-end">
+        <p class="text-center mb-4 ml-4 w-36">Heeft u al een account, log hier in.</p>
+        <div class="w-full flex justify-start">
+          <button class="bg-black text-white h-10 w-24 shadow ml-10 rounded-xl focus:outline-none focus:ring focus:ring-grey-300">Login</button>
+        </div>
+        <div class="w-full flex justify-end grid content-end">
+          <button style="background-color: rgb(88, 237, 112);" class="text-white h-10 w-24 shadow mr-8 rounded-xl focus:outline-none focus:ring focus:ring-grey-300">Register</button>
+        </div>
+      </div>
+    </div>
+    <img src="../icon/CurveBackground.svg" class="absolute bottom-16 z-0 w-full">
+    <footer class="bg-black h-20 flex  justify-evenly items-center absolute bottom-0 w-full rounded-t-2xl">
+      <img src="../icon/SupportButton.svg">
+    </footer>
+  </body>
+</html>
+
+<style>
+    .shadow {
+      -webkit-box-shadow: 7px 7px 0px 1px rgba(7,7,7,0.5);
+      -moz-box-shadow: 7px 7px 0px 1px rgba(7,7,7,0.5);
+      box-shadow: 7px 7px 0px 1px rgba(7,7,7,0.5); 
+  }
+</style>
