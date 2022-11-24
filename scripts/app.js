@@ -1,6 +1,10 @@
+// get needed html elements
+
 const option1 = document.querySelector('select[name=optie1]');
 const choiceDiv = document.getElementById('choices');
 const choiceButtons = choiceDiv.querySelectorAll('input[type=button]');
+
+// add event listeners to (standard) button: "anders"
 
 const andersLabel = document.createElement("label");
 andersLabel.innerHTML = "anders";
@@ -8,6 +12,8 @@ const andersInput = document.createElement("input");
 andersInput.type = "text";
 andersInput.classList.add('bg-black', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
 andersLabel.classList.add('bg-black', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
+
+// add categories in json to dynamically loop through
 
 const subCats = [
     {
@@ -60,6 +66,10 @@ const subCats = [
     },
 ];
 
+// add first questions by looping through the json names
+// add back to option 1 button
+// when option chosen redirect to next question/function
+
 choiceButtons.forEach(element => {
     element.addEventListener('click', function() {
         document.querySelector('footer').classList.add('absolute', 'bottom-0', 'w-full');
@@ -93,6 +103,9 @@ choiceButtons.forEach(element => {
     }, {once : true});
 });
 
+// display subcategories by looping through the chosen categories, subcategories
+// when subcategory chosen redirect to next question/function
+
 function displaySubCategories(sub) {
     const subCatDiv = document.getElementById('subcategories');
     subCatDiv.innerHTML = '';
@@ -114,6 +127,10 @@ function displaySubCategories(sub) {
         }
     });
 }
+
+// display type of plants by looping through certain categorie type of plants
+// add next button, that redirects to next question/function
+// take all the answers and place them in array
 
 function typeOfPlantsQuestion(subCat) {
     const subCatDiv = document.getElementById('subcategories');
@@ -142,14 +159,39 @@ function typeOfPlantsQuestion(subCat) {
             plantOptionsDiv.appendChild(andersLabel);
         }
     });
-    let submitPlant = document.createElement('input');
-    submitPlant.type = 'submit';
-    submitPlant.value = 'Volgende';
+    let submitPlant = document.createElement('a');
+    submitPlant.innerHTML = 'Volgende';
     submitPlant.classList.add('bg-black', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
+    submitPlant.addEventListener('click', function() {
+        let checkedPlants = document.querySelectorAll('input[name="plant"]:checked');
+        let checkedPlantsArray = [];
+        if (checkedPlants.length > 0) {
+            checkedPlants.forEach(element => {
+                checkedPlantsArray.push(element.value);
+            });
+        }
+        if (andersInput.value !== '') {
+            checkedPlantsArray.push(andersInput.value);
+        }
+        window.location.href = 'ComfirmatiePage.html';
+    });
     plantOptionsDiv.appendChild(submitPlant);
     subCatDiv.appendChild(plantOptionsDiv);
     subCatDiv.appendChild(type);
 }
+
+if (window.location.href === 'ComfirmatiePage.html') {
+    const confirmDiv = document.getElementById('confirm');
+    const confirmTitle = document.createElement('h1');
+    confirmTitle.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
+    confirmTitle.innerHTML = 'Bevestiging';
+    confirmDiv.appendChild(confirmTitle);
+    const confirmText = document.createElement('p');
+    confirmText.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
+    confirmText.innerHTML = 'Hieronder ziet u de door u gekozen opties. Klik op de knop om uw bestelling te bevestigen.';
+    confirmDiv.appendChild(confirmText);
+}
+
 
 function quantityQuestions(subCat) {
     const subCatDiv = document.getElementById('subcategories');
@@ -169,8 +211,8 @@ function quantityQuestions(subCat) {
                 questionInput.name = 'question';
                 questionDiv.appendChild(questionInput);
                 subCatDiv.appendChild(questionDiv);
-            });
-        }
+    });
+}
         // if (element === subCat) {
         //     console.log(element.information)
         //     element.information.forEach(subCat, i => {
