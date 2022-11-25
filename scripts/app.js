@@ -172,7 +172,7 @@ function typeOfPlantsQuestion(subCat) {
         if (andersInput.value !== '') {
             checkedPlantsArray.push(andersInput.value);
         }
-        window.location.href = 'ComfirmatiePage.html';
+        quantityQuestions(subCat);
     });
     plantOptionsDiv.appendChild(submitPlant);
     subCatDiv.appendChild(plantOptionsDiv);
@@ -196,48 +196,29 @@ function quantityQuestions(subCat) {
     const subCatDiv = document.getElementById('subcategories');
     subCatDiv.innerHTML = '';
     subCats.forEach(element => {
-        if (element.subcategories.includes(subCat)) {
-            element.information.questions.forEach(question => {
-                const questionDiv = document.createElement('div');
-                questionDiv.classList.add('flex', 'flex-col', 'items-center', 'justify-center');
-                const questionText = document.createElement('h1');
-                questionText.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
-                questionText.innerHTML = question;
-                questionDiv.appendChild(questionText);
-                const questionInput = document.createElement('input');
-                questionInput.classList.add('border', 'border-black', 'rounded', 'm-1', 'p-1');
-                questionInput.type = 'text';
-                questionInput.name = 'question';
-                questionDiv.appendChild(questionInput);
-                subCatDiv.appendChild(questionDiv);
+    if (element.subcategories.includes(subCat)) {
+        element.information.questions.forEach(question => {
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('flex', 'flex-col', 'items-center', 'justify-center');
+            const questionText = document.createElement('h1');
+            questionText.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
+            questionText.innerHTML = question;
+            questionDiv.appendChild(questionText);
+            const questionInput = document.createElement('input');
+            questionInput.classList.add('border', 'border-black', 'rounded', 'm-1', 'p-1');
+            questionInput.type = 'number';
+            questionInput.name = 'quantity';
+            questionInput.step = '1';
+            questionDiv.appendChild(questionInput);
+            subCatDiv.appendChild(questionDiv);
+        });
+    }
     });
-}
-        // if (element === subCat) {
-        //     console.log(element.information)
-        //     element.information.forEach(subCat, i => {
-        //         const subCatTitle = document.createElement('h1');
-        //         subCatTitle.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
-        //         subCatTitle.innerHTML = subCat.questions[i];
-        //         subCatDiv.appendChild(subCatTitle);
-        //         if (subCat.options[i] === 'int') {
-        //             const input = document.createElement('input');
-        //             input.type = 'number';
-        //             input.classList.add('bg-black', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
-        //             subCatDiv.appendChild(input);
-        //         } else {
-        //             const options = subCat.options[i].split(',');  
-        //             options.forEach(option => {
-        //                 const optionButton = document.createElement('button');
-        //                 optionButton.classList.add('bg-black', 'py-2', 'px-4', 'hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
-        //                 optionButton.innerHTML = option;
-        //                 subCatDiv.appendChild(optionButton);
-        //             });
-        //         }
-        //         subCatButton.addEventListener('click', function() {
-        //             displayQuestions(subCat);
-        //         });
-        //         subCatDiv.appendChild(subCatButton);
-        //     });
-        // }
+    let submitForm = document.createElement('a');
+    submitForm.innerHTML = 'Confirm form';
+    submitForm.classList.add('bg-black', 'py-2', 'px-4', 'font-bold','hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
+    submitForm.addEventListener('click', function() {
+            window.location.href = 'ComfirmatiePage.html';
     });
+    subCatDiv.appendChild(submitForm);
 }
