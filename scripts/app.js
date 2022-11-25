@@ -74,7 +74,7 @@ choiceButtons.forEach(element => {
     element.addEventListener('click', function() {
         const back = document.createElement('button');
         back.innerHTML = 'Terug naar optie 1';
-        back.classList.add('bg-black', 'hover:bg-gray-700', 'text-white', 'font-bold', 'py-2', 'rounded', 'ml-10', 'mr-10','cursor-pointer');
+        back.classList.add('bg-blue-600', 'hover:bg-gray-700', 'text-white', 'font-bold', 'py-2', 'rounded', 'ml-10', 'mr-10','cursor-pointer');
         back.addEventListener('click', function() {
             choiceButtons.forEach(element => {
                 setInterval(() => {
@@ -89,7 +89,7 @@ choiceButtons.forEach(element => {
             element.classList.add('bg-black');
             if (element === this) {
                 const choice1 = document.createElement('h1');
-                choice1.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
+                choice1.classList.add('text-lg', 'font-semibold', 'm-1', 'text-center', 'text-white');
                 choice1.innerHTML = '1. ' + element.value;
                 choiceDiv.appendChild(choice1);
                 const subcategories = document.createElement('div');
@@ -108,10 +108,6 @@ choiceButtons.forEach(element => {
 function displaySubCategories(sub) {
     const subCatDiv = document.getElementById('subcategories');
     subCatDiv.innerHTML = '';
-    const subCatTitle = document.createElement('h1');
-    subCatTitle.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
-    subCatTitle.innerHTML = 'Kies een Categorie';
-    subCatDiv.appendChild(subCatTitle);
     subCats.forEach(element => {
         if (element.name === sub) {
             element.subcategories.forEach(subCat => {
@@ -125,6 +121,10 @@ function displaySubCategories(sub) {
             });
         }
     });
+    const subCatTitle = document.createElement('h1');
+    subCatTitle.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
+    subCatTitle.innerHTML = 'Kies een Categorie';
+    subCatDiv.appendChild(subCatTitle);
 }
 
 // display type of plants by looping through certain categorie type of plants
@@ -195,6 +195,13 @@ if (window.location.href === 'ComfirmatiePage.html') {
 function quantityQuestions(subCat) {
     const subCatDiv = document.getElementById('subcategories');
     subCatDiv.innerHTML = '';
+    let submitForm = document.createElement('a');
+    submitForm.innerHTML = 'Confirm appointment';
+    submitForm.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700','font-bold', 'py-2', 'rounded', 'm-2', 'cursor-pointer', 'text-center');
+    submitForm.addEventListener('click', function() {
+            window.location.href = 'ComfirmatiePage.html';
+    });
+    subCatDiv.appendChild(submitForm);
     subCats.forEach(element => {
     if (element.subcategories.includes(subCat)) {
         element.information.questions.forEach(question => {
@@ -214,11 +221,4 @@ function quantityQuestions(subCat) {
         });
     }
     });
-    let submitForm = document.createElement('a');
-    submitForm.innerHTML = 'Confirm form';
-    submitForm.classList.add('bg-black', 'py-2', 'px-4', 'font-bold','hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
-    submitForm.addEventListener('click', function() {
-            window.location.href = 'ComfirmatiePage.html';
-    });
-    subCatDiv.appendChild(submitForm);
 }
