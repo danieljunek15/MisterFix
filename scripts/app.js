@@ -72,7 +72,6 @@ const subCats = [
 
 choiceButtons.forEach(element => {
     element.addEventListener('click', function() {
-        document.querySelector('footer').classList.add('absolute', 'bottom-0', 'w-full');
         const back = document.createElement('button');
         back.innerHTML = 'Terug naar optie 1';
         back.classList.add('bg-black', 'hover:bg-gray-700', 'text-white', 'font-bold', 'py-2', 'rounded', 'ml-10', 'mr-10','cursor-pointer');
