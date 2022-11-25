@@ -179,7 +179,7 @@ function typeOfPlantsQuestion(subCat) {
     subCatDiv.appendChild(type);
 }
 
-if (window.location.href === 'ComfirmatiePage.html') {
+if (window.location.href === 'ConfirmatiePage.html') {
     const confirmDiv = document.getElementById('confirm');
     const confirmTitle = document.createElement('h1');
     confirmTitle.classList.add('text-lg', 'font-bold', 'm-1', 'text-center', 'text-white');
@@ -218,7 +218,7 @@ function quantityQuestions(subCat) {
     submitForm.innerHTML = 'Confirm form';
     submitForm.classList.add('bg-black', 'py-2', 'px-4', 'font-bold','hover:bg-blue-700', 'rounded', 'm-1', 'cursor-pointer', 'text-white');
     submitForm.addEventListener('click', function() {
-            window.location.href = 'ComfirmatiePage.html';
+            window.location.href = 'ConfirmatiePage.html';
     });
     subCatDiv.appendChild(submitForm);
 }
