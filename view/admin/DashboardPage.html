@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#FB002D] min-h-full">
+    <div class="flex justify-center">
+        <a href="../HomePage.html"><img class="relative mt-8" src="../../icon/logo.svg" data-aos="slide-down" data-aos-delay="250"></a>
+    </div>
+    <div class="bg-[#1C1D23] mt-16 mx-12 rounded-xl shadow font" data-aos="fade-in" data-aos-delay="500">
+        <div class="flex justify-center">
+            <div class="px-8 rounded-full bg-[#660C1C] -mt-3">
+                <h1 class="text-white font-bold text-xl">Admin</h1>
+            </div>
+        </div>
+        <div class="items-center flex flex-col text-2xl p-4 font-bold">
+            <h2 class="text-white text-sm">Last completed jobs/hours worked</h2>
+            <p class="text-white text-sm">24/11/2022</p>
+        </div>
+        <div class="bg-black text-sm rounded-xl">
+            <div class="flex justify-between text-white px-4 pt-4 pb-1">
+                <p>40m² grasmat leggen - 8u</p>
+            </div>
+            <div class="flex justify-between text-white px-4 py-1">
+                <p>2 tuinlampen aangesloten - 1.5u</p>
+            </div>
+            <div class="flex justify-between text-white px-4 py-1">
+                <p>Waterleiding gerepareerd - 2u</p>
+            </div>
+            <div class="flex justify-between text-white px-4 pt-1 pb-4">
+                <p>Waterschade gerepareerd - 4u</p>
+            </div>
+            <div class="bg-[#1C1D23] justify-center flex text-2xl rounded-b-xl p-4 pb-8 font">
+                <img src="../../icon/grafiek.png">
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center my-12">
+        <a href="../index.html"><button class="bg-black smallshadow text-white px-8 py-2 rounded-lg font-bold font">Logout</button></a>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>
+
+<style>
+    .shadow {
+        -webkit-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+        -moz-box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+        box-shadow: 20px 20px 3px 0px rgba(7,7,7,0.5);
+    }
+
+    .smallshadow {
+        -webkit-box-shadow: 10px 10px 3px 0px rgba(7,7,7,0.5);
+        -moz-box-shadow: 10px 10px 3px 0px rgba(7,7,7,0.5);
+        box-shadow: 10px 10px 3px 0px rgba(7,7,7,0.5);
+    }
+
+    .font {
+        font-family: 'Inria Sans', sans-serif;
+    }
+</style>
+
+<script>
+    AOS.init();
+</script>
